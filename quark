@@ -1,0 +1,23 @@
+func hello world (n , i)
+{   repeat (1 to 10) {
+        print ("hello world")
+    }
+
+    loop (when i = 0 , i to 10)
+    {
+        print(i)
+    }
+
+}
+
+func takeIO(){
+    input ( type = str , prompt = "give input")
+}
+
+func math(){
+    list_to_add = [43,234,3423,532,53,543434,23]
+    sum = add(list_to_add)
+    sort(list_to_add)
+    list_to_addb_search(34)
+
+}
