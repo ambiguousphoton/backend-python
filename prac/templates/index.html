@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <!-- <link rel="stylesheet" href="index.css"/> -->
+    <style>
+        .h{
+            width: 1000px;
+            background-color: rgb(255, 145, 0);
+            color: rgb(255, 255, 255);
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h">{{bdata}}</h1>
+    {% for n in clist  %}
+    <div>{{forloop.last }}{{n}}</div>
+    {% endfor %}
+<br>
+
+    <table border= "1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Phone no.</th>
+        </tr>
+        {% for i in student_details %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.phone}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    {% if numbers|length > 0 %}
+        {% for n in numbers %}
+            {% if n > 20 %}
+                <div>{{n}}</div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        NO data found
+    {% endif %}
+</body>
+</html>
